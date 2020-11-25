@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image</title>
+
+    <style>
+        img{
+            width: 50%;
+            border:4px solid black;
+        }body{
+            background-color: #8a2be2;
+        }
+		#ez{
+			color: white;
+			background-color: rgb(79, 2, 114);
+		}
+    </style>
+    <script>
+        function pilih(){
+            let list = document.getElementById("kendaraan");
+            let idx = list.selectedIndex;
+            console.log("mobil yang dipilih " + list[idx].value);
+            let area_gambar = document.getElementById("mobil");
+            area_gambar.src="gambar/"+list[idx].value+".jpg";
+            alert("Ini mobil " + list[idx].value);
+        }
+    </script>
+</head>
+<body>
+    <div id="ez">
+        <center>
+            <h1>IMAGE PICKER</h1>
+        </center>
+    </div>
+    <form id="m">
+        Pilih mobil yang ingin di beli : <select id="kendaraan" onchange="pilih()">
+            <option value="honda">Honda</option>
+            <option value="toyota">Toyota</option>
+            <option value="jeep">Jeep</option>
+            <option value="ferrari">Ferrari</option>
+            <option value="lamborgini">Lamborgini</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="Nissan">Nissan</option>
+            <option value="Suzuki">Suzuki</option>
+        </select>
+    </form>
+    <br/>
+    <img src="gambar/honda.jpg" alt="kendaraan mobil" id="mobil"/>
+</body>
+</html>

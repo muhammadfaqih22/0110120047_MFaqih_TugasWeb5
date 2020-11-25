@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>pesan</title>
+
+	<style>
+        body{
+            background-color: #8a2be2;
+        }
+		#as{
+			color: white;
+			background-color: rgb(79, 2, 114);
+		}
+    </style>
+</head>
+<body>
+	<div id= "as">
+		<h2>MASUKKAN PESAN YANG ANDA INGINKAN</h2>
+	</div>
+	<div id="isichat">
+	</div>
+	<form method="REQUEST">
+		<input id="pesan" style="width: 30%" type="text" name="pesan" placeholder="Masukan Pesan">
+		<button onclick="return kirim();">KIRIM PESAN</button>
+	</form>
+	
+	<script type="text/javascript">
+		function kirim() {
+			pesan = document.getElementById("pesan").value;
+			document.getElementById("isichat").innerHTML = pesan;
+			return false;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALIDATION</title>
+	<style>
+        body{
+            background-color: #8a2be2;
+        }
+		#as{
+			color: white;
+			background-color: rgb(79, 2, 114);
+		}
+    </style>
+</head>
+<body>
+    <center>
+        <div id="as" style="width: 50%;">
+                <h2>FROM VALIDATION</h2>
+        </div>
+    </center>
+    <center>
+        <div id="as" style="width: 50%;">
+            <br>
+            <form method="request">
+                <input type="text" id="name" name="name" onKeyPress="return maxlength(event)" placeholder="Masukkan Nama" required="" />
+                <br> <br>
+                <input type="email" id="email" name="email" placeholder="Masukkan Email" required />
+                <br> <br>
+                <input type="time" id="jam" name="jam" required />
+                <br> <br>
+                <input type="address" id="address" name="address" placeholder="masukkan alamat" requared />
+                <br> <br>
+                            <select  name="tujuan" class="form_login" id="tujuan" required>
+                                <option value="" disabled selected>Tujuan Kota</option>
+                                <option value="INDONESIA">BANDUNG</option>
+                                <option value="KOREA SELATAN">YOGYAKARTA</option>
+                                <option value="ARAB SAUDI">BALI</option>
+                                <option value="SINGAPURA">BANJARMASIN</option>
+                                <option value="MALAYSIA">PALEMBANG</option>
+                                <option value="THAILAND">MEDAN</option>
+                            </select>    
+                <br><br>
+                <input type="text" id="tiket" name="tiket" placeholder="Jumlah Tiket " onKeyUp="angka(this)" maxlength="2" required />
+                <br><br>
+                <button onclick="asd()">KLIK</button>
+            </form>
+            <br>
+        </div>
+    </center>
+    <script>
+        alert("SELAMAT DATANG SILAKAN MESAN TIKET")
+        function asd(){
+            alert("ANDA SUDAH TERDAFTAR")
+        }
+    </script>
+</body>
+</html>
